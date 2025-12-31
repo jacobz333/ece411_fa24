@@ -1,0 +1,37 @@
+
+Warning-[LNX_OS_VERUN] Unsupported Linux version
+  Linux version 'Red Hat Enterprise Linux release 8.10 (Ootpa)' is not 
+  supported on 'x86_64' officially, assuming linux compatibility by default. 
+  Set VCS_ARCH_OVERRIDE to linux or suse32 to override.
+  Please refer to release notes for information on supported platforms.
+
+
+Warning-[LINX_KRNL] Unsupported Linux kernel
+  Linux kernel '4.18.0-553.22.1.el8_10.x86_64' is not supported.
+  Supported versions are 2.4* or 2.6*.
+
+Command: vcs -l compile.log -top random_tb -o random_tb
+Doing common elaboration 
+                         Chronologic VCS (TM)
+         Version R-2020.12-SP1-1 -- Tue Nov  5 21:59:39 2024
+
+                    Copyright (c) 1991 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+
+Error-[TMENF-ILL] Top Module/Entity not found
+  Top module/entity/config "random_tb" is not found in the following library 
+  list.
+  Liblist: DEFAULT
+
+
+Error-[NM] No modules defined
+  No modules defined in current design file(s).  
+
+2 errors
+CPU time: .121 seconds to compile
+
+ common elaboration failed

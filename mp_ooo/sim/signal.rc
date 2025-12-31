@@ -1,0 +1,175 @@
+Magic 271485
+Revision Verdi_R-2020.12-SP1-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort -10 20 958 807 170 3
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/jzhen24/ece411_ooo2/mp_ooo/sim/vcs/dump.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 7293.935378 7329.222972
+cursor 7300.76973397405
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 21
+; marker line index
+markerPos 51
+
+; logical expression list
+; addExprSig expr_name expression_string
+activeDirFile "" "/home/jzhen24/ece411_ooo2/mp_ooo/sim/vcs/dump.fsdb"
+
+addExprSig -b 1 -n U test1 "/top_tb/dut/PC[31:0]"=='h1ece_c5c0
+
+; logical expression list
+; addExprSig expr_name expression_string
+
+addExprSig -b 1 -n U test0 "/top_tb/dut/dcache/ufp_addr[31:0]"=='hefffafc8
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/jzhen24/ece411_ooo2/mp_ooo/sim/vcs/dump.fsdb"
+addSignal -h 15 /top_tb/dut/load_store_logic_i/store_q/clk
+addSignal -h 15 -holdScope rst
+addSignal -h 15 -UNSIGNED -HEX /top_tb/dut/PC[31:0]
+addSignal -h 15 /top_tb/dut/commit_logic_i/monitor_order[0:7]
+addSignal -h 15 /test1
+addSignal -h 15 /top_tb/dut/load_store_queue_i/Qmem[0:15]
+addSignal -expanded -h 15 -holdScope dout[0:1]
+addSignal -h 15 -holdScope dout[0]
+addSignal -h 15 -holdScope dout[1]
+addSignal -h 15 /top_tb/dut/load_store_logic_i/store_q/Qmem[0:7]
+addSignal -h 15 -holdScope dequeue[0:0]
+addSignal -expanded -h 15 -holdScope din[0:0]
+addSignal -h 15 -holdScope dout[0:0]
+addSignal -h 15 -holdScope enqueue[0:0]
+addSignal -h 15 -holdScope head_addr[1:0]
+addSignal -h 15 -holdScope tail_addr[1:0]
+addSignal -h 15 /top_tb/dut/load_store_logic_i/condition
+addSignal -h 15 -holdScope rob_current_tail_addr[3:0]
+addSignal -expanded -h 15 -holdScope lsq_dout[0]
+addSignal -h 15 -holdScope lsq_dout[0].ready
+addSignal -h 15 -holdScope lsq_dout[0].rob_id[3:0]
+addSignal -h 15 -holdScope lsq_dout[0].pr_dest[5:0]
+addSignal -h 15 -holdScope lsq_dout[0].ar_dest[4:0]
+addSignal -h 15 -holdScope lsq_dout[0].is_load
+addSignal -h 15 -holdScope lsq_dout[0].funct3[2:0]
+addSignal -h 15 -holdScope lsq_dout[0].mask[3:0]
+addSignal -h 15 -holdScope lsq_dout[0].addr[31:0]
+addSignal -h 15 -holdScope lsq_dout[0].wdata[31:0]
+addSignal -h 15 -holdScope lsq_dout[0].monitor_rs1_rdata[31:0]
+addSignal -h 15 -holdScope lsq_dout[0].monitor_rs2_rdata[31:0]
+addSignal -h 15 -holdScope lsq_dequeue[1:0]
+addSignal -h 15 -holdScope forwardable
+addSignal -h 15 -holdScope match_mask[3:0]
+addSignal -h 15 -holdScope cdb
+addSignal -h 15 -holdScope cdb_busy
+addGroup "G2"
+addSignal -h 15 /top_tb/dut/load_store_logic_i/load_sq_rdata[31:0]
+addSignal -h 15 -holdScope invalidate_resp
+addSignal -h 15 -holdScope cache_load
+addSignal -h 15 -holdScope cache_load_next
+addSignal -h 15 -holdScope rob_flush
+addSignal -h 15 -holdScope rob_elemcount[4:0]
+addSignal -h 15 -holdScope lsq_elemcount[4:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/dut/dcache/ufp_addr[31:0]
+addSignal -h 15 /test0
+addSignal -h 15 /top_tb/dut/dcache/ufp_rdata[31:0]
+addSignal -h 15 -holdScope ufp_resp
+addSignal -h 15 -holdScope ufp_rmask[3:0]
+addSignal -h 15 -holdScope ufp_wdata[31:0]
+addSignal -h 15 -holdScope ufp_wmask[3:0]
+addGroup "G3"
+addGroup "G4"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/jzhen24/ece411_ooo2/mp_ooo/sim/vcs/dump.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/_vcs_unit__905666850"
+"/top_tb"
+"/top_tb/dut"
+"/top_tb/dut/commit_logic_i"
+"/top_tb/dut/dcache"
+"/top_tb/dut/load_store_logic_i"
+"/top_tb/dut/load_store_logic_i/store_q"
+"/top_tb/dut/load_store_queue_i"
+"/top_tb/monitor"
+
+SCOPE_LIST_BEGIN
+"/_vcs_unit__905666850"
+"/_vcs_unit__3774646372"
+"/top_tb/dut/load_store_logic_i"
+"/top_tb/dut/load_store_queue_i"
+"/top_tb/dut/load_store_logic_i/store_q"
+"/top_tb/dut/dcache"
+"/top_tb"
+"/top_tb/dut"
+"/top_tb/dut/commit_logic_i"
+"/rv32i_types"
+"/top_tb/dut/branch_alu_inst"
+"/top_tb/dut/branch_queue_i"
+"/top_tb/dut/cacheline_adapter_i"
+"/top_tb/unnamed$$_0"
+"/top_tb/monitor"
+"/top_tb/dut/load_store_calculator_inst"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+
+
+FILTER_SIGNAL_BEGIN
+
+"*"
+
+FILTER_STRING_LIST_BEGIN
+FILTER_STRING_LIST_END
+
+FILTER_TYPE_LIST_BEGIN
+"All"
+"Input"
+"Output"
+"Inout"
+"Net"
+"Register"
+"Buffer"
+"Linkage"
+"ClassTransaction"
+"Property"
+"Others"
+FILTER_TYPE_LIST_END
+
+FILTER_SIGNAL_END

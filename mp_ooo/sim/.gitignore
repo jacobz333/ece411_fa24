@@ -1,0 +1,6 @@
+bin
+vcs/**/*
+!vcs/*.rc
+verdi
+verilator
+spike

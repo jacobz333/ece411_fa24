@@ -1,0 +1,138 @@
+Magic 271485
+Revision Verdi_R-2020.12-SP1-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1920 395 310 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/qingzhe3/Desktop/ece411_g/mp_ooo/sim/vcs/dump.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 3651.005551 3683.509020
+cursor 3699.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 50
+; marker line index
+markerPos 51
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/qingzhe3/Desktop/ece411_g/mp_ooo/sim/vcs/dump.fsdb"
+addSignal -h 15 /top_tb/dut/commit_logic_i/monitor_valid[0]
+addSignal -h 15 -holdScope monitor_order[0][63:0]
+addSignal -h 15 -holdScope monitor_inst[0][31:0]
+addSignal -h 15 -holdScope monitor_pc_rdata[0][31:0]
+addSignal -h 15 -holdScope monitor_pc_wdata[0][31:0]
+addSignal -h 15 /top_tb/dut/bmem_addr[31:0]
+addSignal -h 15 -holdScope bmem_read
+addSignal -h 15 -holdScope bmem_write
+addSignal -h 15 -holdScope bmem_wdata[63:0]
+addSignal -h 15 -holdScope bmem_ready
+addSignal -h 15 -holdScope bmem_raddr[31:0]
+addSignal -h 15 -holdScope bmem_rdata[63:0]
+addSignal -h 15 -holdScope bmem_rvalid
+addSignal -h 15 -holdScope clk
+addSignal -h 15 /top_tb/dut/commit_logic_i/rob_elemcount[4:0]
+addSignal -h 15 /top_tb/dut/fetch_logic_i/icache_ufp_rdata[255:0]
+addSignal -h 15 -holdScope icache_ufp_addr[31:0]
+addSignal -h 15 -holdScope icache_ufp_resp
+addSignal -h 15 -holdScope instructions[0].instruction[31:0]
+addSignal -h 15 /top_tb/dut/PC[31:0]
+addSignal -h 15 /top_tb/dut/computation_unit/branch_alu_inst/rs_entry_valid
+addSignal -h 15 -holdScope br_en
+addSignal -h 15 /top_tb/dut/PC_next[31:0]
+addSubGroup "IQ" -e FALSE
+addSignal -h 15 /top_tb/dut/instruction_queue_i/enqueue[0:0]
+addSignal -h 15 -holdScope dequeue[0:0]
+addSignal -h 15 -holdScope elemcount[4:0]
+addSignal -h 15 -holdScope dout[0].instruction[31:0]
+addSignal -h 15 -holdScope dout[0].pc[31:0]
+addSignal -h 15 -holdScope dout[0].order[63:0]
+addSignal -h 15 -holdScope head_addr[3:0]
+addSignal -h 15 -holdScope tail_addr[3:0]
+endSubGroup "IQ"
+addSubGroup "BQ" -e FALSE
+addSignal -h 15 /top_tb/dut/computation_unit/branch_alu_inst/rs_entry_reg.rob_id[3:0]
+addSignal -h 15 -UNSIGNED -holdScope rs_entry_reg.opcode[6:0]
+addSignal -h 15 -holdScope rs_entry_reg.funct3[2:0]
+addSignal -h 15 -holdScope bq_din.rob_id[3:0]
+addSignal -h 15 -holdScope bq_din.branch_taken
+addSignal -h 15 -holdScope bq_din.branch_target[31:0]
+addSignal -h 15 -holdScope bq_din.order[63:0]
+addSignal -h 15 -holdScope bq_enqueue
+addSignal -h 15 /top_tb/dut/branch_queue_i/dequeue[0:0]
+addSignal -h 15 /top_tb/dut/bq_dout.rob_id[3:0]
+addSignal -h 15 -holdScope bq_dout.branch_taken
+addSignal -h 15 -holdScope bq_dout.branch_target[31:0]
+addSignal -h 15 -holdScope bq_dout.order[63:0]
+endSubGroup "BQ"
+addSubGroup "ROB"
+addSignal -h 15 /top_tb/dut/commit_logic_i/rob_dout[0]
+addSignal -h 15 /top_tb/dut/rob_i/enqueue[0:0]
+addSignal -h 15 -holdScope dequeue[0:0]
+addSignal -h 15 -holdScope elemcount[4:0]
+endSubGroup "ROB"
+addSignal -h 15 /top_tb/dut/fetch_logic_i/pc[31:0]
+addSignal -c ID_PURPLE5 -ls solid -lw 1 -h 15 /top_tb/dut/commit_logic_i/rob_flush
+addSignal -h 15 -holdScope bq_dout
+addSignal -h 15 -holdScope rob_id_committed[0][3:0]
+addSignal -h 15 /top_tb/dut/rob_i/Qmem[0:15]
+addSignal -h 15 /top_tb/dut/iq_dout[0].instruction[31:0]
+addSignal -h 15 -holdScope iq_dout[0].pc[31:0]
+addSignal -h 15 -holdScope iq_dout[0].order[63:0]
+addGroup "DISPATCH"
+addSignal -h 15 /top_tb/dut/dispatch_logic_i/instr[0].word[31:0]
+addSignal -h 15 -holdScope mult_div_flag
+addSignal -h 15 -holdScope load_store_flag
+addSignal -h 15 -holdScope branch_flag
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/qingzhe3/Desktop/ece411_g/mp_ooo/sim/vcs/dump.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/_vcs_unit__1475023726"
+"/top_tb"
+"/top_tb/dut"
+
+SCOPE_LIST_BEGIN
+"/_vcs_unit__1475023726"
+"/_vcs_unit__4180699907"
+"/top_tb/dut"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+
